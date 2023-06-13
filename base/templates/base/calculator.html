@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="divvy">
+    <form method="POST" action="{% url 'calculator' %}">
+        {% csrf_token %}
+
+        <label for="form.state" style="font-family: Gill Sans, sans-serif;">Choose Your State</label>
+        {{form.state}}
+
+      <label for="form.annual_income"  style="font-family: Gill Sans, sans-serif;">Enter Your Annual Income</label>
+      {{form.annual_income}}
+  
+      <button type="submit"  style="font-family: Gill Sans, sans-serif;font-size: larger;">Submit</button>
+    </form>
+</div>
+
+{% block results %}
+
+
+{% endblock  %}
+
+
+{% endblock %}

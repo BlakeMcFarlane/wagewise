@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="divvy">
+    <form method="POST" action="{% url 'mortgage' %}">
+        {% csrf_token %}
+
+      <label for="form.purchase_price"  style="font-family: Gill Sans, sans-serif;">Purchase Price</label>
+      {{form.purchase_price}}
+
+      <label for="form.down_payment"  style="font-family: Gill Sans, sans-serif;">Down Payment</label>
+      {{form.down_payment}}
+
+      <label for="form.interest_rate" style="font-family: Gill Sans, sans-serif;">Interest Rate</label>
+        {{form.interest_rate}}
+
+        <label for="form.loan_term" style="font-family: Gill Sans, sans-serif;">Loan Term</label>
+        {{form.loan_term}}
+  
+      <button type="submit"  style="font-family: Gill Sans, sans-serif;font-size: larger;">Submit</button>
+    </form>
+</div>
+
+{% block results %}
+
+
+{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base/mortgage.html' %}
+{% load static %}
+
+{% block results %}
+
+
+<div class="mortgage-container">
+    <div class="left">
+        <div style="display:flex;justify-content: space-between; height:50px">
+            <h2 style="color:rgb(69, 69, 69)">Loan Amount</h2>
+            <h1 style="color:rgb(28, 28, 28)"> {{ loan_amount }}</h3>
+        </div>
+        <div style="display:flex;justify-content: space-between; height:50px">
+            <h2 style="color:rgb(69, 69, 69)"> Interest Rate</h2>
+            <h1 style="color:rgb(28, 28, 28)"> {{ interest_rate }} %</h3>
+        </div>
+        <div style="display:flex;justify-content: space-between; height:50px">
+            <h2 style="color:rgb(69, 69, 69)"> Number of Payments</h2>
+            <h1 style="color:rgb(28, 28, 28)"> {{ amount_monthly_payments }} </h3>
+        </div>
+
+        <a href="https://www.nerdwallet.com/best/mortgages/mortgage-lenders">
+        <div style="width:100%; display:flex; justify-content: center;">
+            <div style="width: 100%;margin-top: 30px;background-color: #45a049; height:45px; display:flex; justify-content: center; align-items: center; align-self: center;";> 
+                <h3 style="color:white">Find Lenders</h2>
+            </div>
+        </div>
+        </a>
+    </div>
+    <div class="right">
+        <h1 style="color:rgb(69, 69, 69)"> Monthly Payment</h1>
+        <h1 style="font-size: 60pt; color: #45a049; margin-top: 0;"> {{monthly_payment}}</h1>
+    </div>
+</div>
+{% endblock %}
